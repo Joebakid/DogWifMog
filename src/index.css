@@ -10,9 +10,12 @@
   text-align: center;
 }
 
+html,
 body {
   background-color: #aaa5a5;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .container {

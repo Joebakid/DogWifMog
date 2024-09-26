@@ -3,7 +3,7 @@ import React from "react";
 export default function FirstSection() {
   return (
     <>
-      <section className="first-section container">
+      <section className="first-section container " data-aos="fade-down">
         <div className="text-hero ">
           <h1 className="title">Introducing Dogwifmog</h1>
           <p className="showcase-text">

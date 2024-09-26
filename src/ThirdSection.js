@@ -39,7 +39,7 @@ export default function Thirdsection() {
       {/* Header Section */}
       <hr />
       {/* Token Distribution Section */}
-      <div className="token-distribution">
+      <div className="token-distribution" data-aos="fade-down">
         <h2 className="title">Token Distribution</h2>
 
         <Doughnut data={data} />
@@ -58,7 +58,7 @@ export default function Thirdsection() {
       {/* Token Details Section */}
       <div className="details-container">
         {/* Token Allocation */}
-        <div className="token-details">
+        <div className="token-details" data-aos="fade-down">
           <h2 className="sub-title">Token Allocation</h2>
           <ul className="list-item-thirdsection">
             <li>Team: 20% - 200M Tokens</li>
@@ -72,7 +72,7 @@ export default function Thirdsection() {
         </div>
 
         {/* Token Utility Section */}
-        <div className="utility">
+        <div className="utility" data-aos="fade-down">
           <h2 className="sub-title">Token Utility</h2>
           <p className="">The token will have the following utilities:</p>
           <ul className="list-item-thirdsection">
@@ -84,7 +84,7 @@ export default function Thirdsection() {
         </div>
 
         {/* Vesting Schedule Section */}
-        <div className="vesting-schedule">
+        <div className="vesting-schedule" data-aos="fade-down">
           <h2 className="sub-title">Vesting Schedule</h2>
           <ul className="list-item-thirdsection">
             <li>Team: 1-year cliff, vested monthly over 3 years</li>

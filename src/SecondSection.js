@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SecondSection() {
   return (
-    <section className="second-section container">
+    <section className="second-section container" data-aos="fade-down">
       <h1 className="title py-1">About</h1>
       <p className="about-text">
         Dogwifmog is an innovative, community-driven meme coin that celebrates

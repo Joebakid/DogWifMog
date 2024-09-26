@@ -9,7 +9,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar container sticky">
+    <nav
+      className="navbar container sticky"
+      data-aos="fade-down"
+      data-aos-anchor-placement="center-bottom"
+    >
       <div className="logo">Dogwifmog</div>
       <ul className={isOpen ? "nav-links open" : "nav-links"}>
         <li>
