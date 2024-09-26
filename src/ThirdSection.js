@@ -44,6 +44,16 @@ export default function Thirdsection() {
         <h2 className="title">Token Distribution</h2>
 
         <Doughnut data={data} />
+        {/* Token Data Grid */}
+        <div className="data-grid">
+          {data.labels.map((label, index) => (
+            <div className="grid-item" key={index}>
+              <p>
+                <strong>{label}</strong>: {data.datasets[0].data[index]}%
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Token Details Section */}
@@ -84,8 +94,6 @@ export default function Thirdsection() {
           </ul>
         </div>
       </div>
-
-    
     </section>
   );
 }
