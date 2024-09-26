@@ -332,4 +332,8 @@ li {
   p {
     font-size: 1.35rem;
   }
+
+  .footer-text {
+    font-size: 1.2rem;
+  }
 }
