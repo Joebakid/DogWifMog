@@ -99,6 +99,7 @@ body {
 .list-item-thirdsection,
 p {
   font-size: 2rem;
+  line-height: 3;
 }
 
 .img {
@@ -250,7 +251,7 @@ hr {
 }
 
 li {
-  list-style: lower-greek;
+  /* list-style: lower-greek; */
   text-align: left;
 }
 
@@ -298,6 +299,7 @@ li {
   .about-text {
     font-size: 1.5rem;
     text-align: center;
+    line-height: 2;
   }
 
   .title {
