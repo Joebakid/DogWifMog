@@ -12,7 +12,6 @@ export default function Thirdsection() {
     labels: [
       "Team",
       "Advisors",
-      "Private Sale",
       "Public Sale",
       "Liquidity",
       "Community",
@@ -64,7 +63,7 @@ export default function Thirdsection() {
           <ul className="list-item-thirdsection">
             <li>Team: 20% - 200M Tokens</li>
             <li>Advisors: 5% - 50M Tokens</li>
-            <li>Private Sale: 15% - 150M Tokens</li>
+
             <li>Public Sale: 20% - 200M Tokens</li>
             <li>Liquidity Pool: 10% - 100M Tokens</li>
             <li>Community Incentives: 20% - 200M Tokens</li>
@@ -75,7 +74,7 @@ export default function Thirdsection() {
         {/* Token Utility Section */}
         <div className="utility">
           <h2 className="sub-title">Token Utility</h2>
-          <p>The token will have the following utilities:</p>
+          <p className="">The token will have the following utilities:</p>
           <ul className="list-item-thirdsection">
             <li>Governance Voting</li>
             <li>Staking Rewards</li>

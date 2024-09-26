@@ -32,6 +32,11 @@ export default function Navbar() {
             Pump.fun
           </a>
         </li>
+        <li>
+          <a className="link-el" href="#contact">
+            WhitePaper
+          </a>
+        </li>
       </ul>
       <div className="hamburger" onClick={toggleMenu}>
         <span className={isOpen ? "line open" : "line"}></span>

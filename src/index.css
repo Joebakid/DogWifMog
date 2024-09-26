@@ -96,7 +96,8 @@ body {
 
 .showcase-text,
 .about-text,
-.list-item-thirdsection {
+.list-item-thirdsection,
+p {
   font-size: 2rem;
 }
 
@@ -248,6 +249,15 @@ hr {
   font-size: 1rem;
 }
 
+li {
+  list-style: lower-greek;
+  text-align: left;
+}
+
+.roadmap-phase li {
+  list-style: none;
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .nav-links {
@@ -295,10 +305,10 @@ hr {
     font-weight: bold;
   }
 
-  .showcase-text,
+  /* .showcase-text,
   .list-item-thirdsection {
     font-size: 2rem;
-  }
+  } */
   .first-section {
     flex-direction: column;
   }
@@ -309,5 +319,12 @@ hr {
 
   .roadmap-grid {
     grid-template-columns: 1fr;
+  }
+
+  .showcase-text,
+  .about-text,
+  .list-item-thirdsection,
+  p {
+    font-size: 1.35rem;
   }
 }
