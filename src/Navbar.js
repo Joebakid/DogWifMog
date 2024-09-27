@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-// import "./Navbar.css";
+import React, { useState, useRef, useEffect } from "react";
+import { gsap } from "gsap";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(true);
@@ -8,10 +8,29 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  // Define the sectionRef here in Navbar
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      sectionRef.current,
+      {
+        opacity: 0,
+        y: -50,
+      }, // Initial state (from)
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: "power2.out",
+      } // End state (to)
+    );
+  }, []);
+
   return (
     <nav
       className="navbar container sticky"
-      data-aos="fade-down"
+      ref={sectionRef}
       data-aos-anchor-placement="center-bottom"
     >
       <div className="logo">Dogwifmog</div>

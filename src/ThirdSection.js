@@ -1,12 +1,41 @@
-import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
-// import "./Thirdsection.css";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger with GSAP
+gsap.registerPlugin(ScrollTrigger);
 
 // Register the necessary chart elements
 Chart.register(ArcElement, Tooltip, Legend);
 
 export default function Thirdsection() {
+  const sectionRef = useRef(null); // Create a ref for the section
+
+  useEffect(() => {
+    // GSAP animation with ScrollTrigger
+    gsap.fromTo(
+      sectionRef.current,
+      {
+        opacity: 0,
+        y: 100,
+      }, // Initial state
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: sectionRef.current, // Trigger animation when this section enters the viewport
+          start: "top 80%", // Animation starts when the top of the section is 80% into the viewport
+          end: "bottom 60%", // End when the bottom of the section reaches 60% of the viewport
+          toggleActions: "play none none none", // Play the animation on scroll down
+        },
+      } // End state
+    );
+  }, []);
+
   // Token distribution data for the chart
   const data = {
     labels: [
@@ -35,13 +64,12 @@ export default function Thirdsection() {
   };
 
   return (
-    <section className="Thirdsection container">
+    <section ref={sectionRef} className="Thirdsection container">
       {/* Header Section */}
       <hr />
       {/* Token Distribution Section */}
-      <div className="token-distribution" data-aos="fade-down">
+      <div className="token-distribution">
         <h2 className="title">Token Distribution</h2>
-
         <Doughnut data={data} />
         {/* Token Data Grid */}
         <div className="data-grid">
@@ -58,12 +86,11 @@ export default function Thirdsection() {
       {/* Token Details Section */}
       <div className="details-container">
         {/* Token Allocation */}
-        <div className="token-details" data-aos="fade-down">
+        <div className="token-details">
           <h2 className="sub-title">Token Allocation</h2>
           <ul className="list-item-thirdsection">
             <li>Team: 20% - 200M Tokens</li>
             <li>Advisors: 5% - 50M Tokens</li>
-
             <li>Public Sale: 20% - 200M Tokens</li>
             <li>Liquidity Pool: 10% - 100M Tokens</li>
             <li>Community Incentives: 20% - 200M Tokens</li>
@@ -72,9 +99,9 @@ export default function Thirdsection() {
         </div>
 
         {/* Token Utility Section */}
-        <div className="utility" data-aos="fade-down">
+        <div className="utility">
           <h2 className="sub-title">Token Utility</h2>
-          <p className="">The token will have the following utilities:</p>
+          <p>The token will have the following utilities:</p>
           <ul className="list-item-thirdsection">
             <li>Governance Voting</li>
             <li>Staking Rewards</li>
@@ -84,7 +111,7 @@ export default function Thirdsection() {
         </div>
 
         {/* Vesting Schedule Section */}
-        <div className="vesting-schedule" data-aos="fade-down">
+        <div className="vesting-schedule">
           <h2 className="sub-title">Vesting Schedule</h2>
           <ul className="list-item-thirdsection">
             <li>Team: 1-year cliff, vested monthly over 3 years</li>
