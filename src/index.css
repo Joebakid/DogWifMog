@@ -31,7 +31,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
   background-color: #333;
   color: white;
   position: relative;
@@ -333,7 +333,7 @@ li {
   }
 
   .footer {
-    padding: 5px;
+    padding: 10px;
     margin: 100px 0 0 0;
     background-color: #f1f1f1;
     margin-top: 20px;
