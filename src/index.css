@@ -99,10 +99,9 @@ body {
 
 .showcase-text,
 .about-text,
-.list-item-thirdsection,
-p {
+.list-item-thirdsection {
   font-size: 2rem;
-  line-height: 3;
+  line-height: 2;
 }
 
 .img {
@@ -333,7 +332,16 @@ li {
     font-size: 1.35rem;
   }
 
+  .footer {
+    padding: 5px;
+    margin: 100px 0 0 0;
+    background-color: #f1f1f1;
+    margin-top: 20px;
+    width: 100%;
+  }
+
   .footer-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    padding: 0;
   }
 }
