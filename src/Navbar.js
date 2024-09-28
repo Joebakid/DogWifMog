@@ -60,6 +60,16 @@ export default function Navbar() {
             WhitePaper
           </a>
         </li>
+        <li>
+          <a className="link-el" href="#contact">
+            Twitter
+          </a>
+        </li>
+        <li>
+          <a className="link-el" href="#contact">
+            Contract address
+          </a>
+        </li>
       </ul>
       <div className="hamburger" onClick={toggleMenu}>
         <span className={isOpen ? "line open" : "line"}></span>

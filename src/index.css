@@ -104,6 +104,10 @@ body {
   line-height: 2;
 }
 
+.list-item-thirdsection li {
+  font-size: 1.7rem;
+}
+
 .img {
   width: 300px;
 }
