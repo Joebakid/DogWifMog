@@ -76,6 +76,11 @@ body {
   gap: 5px;
 }
 
+.logo-link {
+  color: white;
+  text-decoration: none;
+}
+
 .line {
   width: 25px;
   height: 3px;
@@ -265,6 +270,27 @@ li {
   list-style: none;
 }
 
+.whitepaper-title {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.flex {
+  display: flex;
+  padding: 150px 0 0 0;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.flex p {
+  line-height: 3;
+  font-size: medium;
+}
+.whitepaper-content {
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .nav-links {
@@ -348,4 +374,19 @@ li {
     font-size: 1.1rem;
     padding: 0;
   }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .flex p {
+    line-height: 1.5;
+    font-size: small;
+  }
+
+  /* .whitepaper-title {
+    font-size: large;
+  } */
 }

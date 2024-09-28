@@ -1,34 +1,18 @@
 import Navbar from "./Navbar";
 import Main from "./Main";
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import WhitePaper from "./Whitepaper"; // Ensure this is correctly cased
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  // Using a ref to target the element to animate
-  const sectionRef = useRef(null);
-  const imgRef = useRef(null);
-
-  useEffect(() => {
-    // GSAP Animation on the section and image
-    gsap.from(sectionRef.current, {
-      opacity: 0,
-      y: 50,
-      duration: 1.5,
-      ease: "power2.out",
-    });
-
-    gsap.from(imgRef.current, {
-      opacity: 0,
-      scale: 0.5,
-      duration: 1.5,
-      ease: "bounce.out",
-      delay: 0.5,
-    });
-  }, []);
   return (
     <div className="body">
       <Navbar />
-      <Main />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/whitepaper" element={<WhitePaper />} />{" "}
+        {/* Ensure this matches the case */}
+      </Routes>
     </div>
   );
 }
