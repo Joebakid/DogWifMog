@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false); // Start with the menu closed
+  const [isOpen, setIsOpen] = useState(true); // Start with the menu closed
   const sectionRef = useRef(null);
 
   // Function to toggle the menu
