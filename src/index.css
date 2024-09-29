@@ -291,6 +291,13 @@ li {
 .whitepaper-content {
 }
 
+tr,
+td {
+  /* color: white; */
+  border: 1px solid white;
+  padding: 10px;
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .nav-links {

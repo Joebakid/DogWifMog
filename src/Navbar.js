@@ -1,16 +1,24 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom"; // Make sure Link is imported from react-router-dom
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false); // Start with the menu closed
   const sectionRef = useRef(null);
 
+  // Function to toggle the menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  // Function to handle link clicks
+  const handleLinkClick = () => {
+    console.log("Link clicked!"); // Debugging log
+    setIsOpen(false); // Close the menu on link click
+  };
+
   useEffect(() => {
+    // Animation for the navbar
     gsap.fromTo(
       sectionRef.current,
       {
@@ -29,42 +37,43 @@ export default function Navbar() {
   return (
     <nav className="navbar container sticky" ref={sectionRef}>
       <div className="logo">
-        {" "}
-        <Link className="logo-link" to="/">Dogwifmog</Link>
+        <Link className="logo-link" to="/">
+          Dogwifmog
+        </Link>
       </div>
-      <ul className={isOpen ? "nav-links open" : "nav-links"}>
+      <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li>
-          <Link className="link-el" to="/">
+          <Link className="link-el" to="/" onClick={handleLinkClick}>
             Home
           </Link>
         </li>
         <li>
-          <Link className="link-el" to="#about">
+          <Link className="link-el" to="#about" onClick={handleLinkClick}>
             About
           </Link>
         </li>
         <li>
-          <Link className="link-el" to="#services">
+          <Link className="link-el" to="#services" onClick={handleLinkClick}>
             Tokenomics
           </Link>
         </li>
         <li>
-          <Link className="link-el" to="#contact">
+          <Link className="link-el" to="#contact" onClick={handleLinkClick}>
             Pump.fun
           </Link>
         </li>
         <li>
-          <Link className="link-el" to="/whitepaper">
+          <Link className="link-el" to="/whitepaper" onClick={handleLinkClick}>
             WhitePaper
           </Link>
         </li>
         <li>
-          <Link className="link-el" to="#contact">
+          <Link className="link-el" to="#contact" onClick={handleLinkClick}>
             Twitter
           </Link>
         </li>
         <li>
-          <Link className="link-el" to="#contact">
+          <Link className="link-el" to="#contact" onClick={handleLinkClick}>
             Contract address
           </Link>
         </li>

@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import Main from "./Main";
-import WhitePaper from "./Whitepaper"; // Ensure this is correctly cased
+import WhitePaper from "./Whitepaper";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -10,8 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/whitepaper" element={<WhitePaper />} />{" "}
-        {/* Ensure this matches the case */}
+        <Route path="/whitepaper" element={<WhitePaper />} />
       </Routes>
     </div>
   );
